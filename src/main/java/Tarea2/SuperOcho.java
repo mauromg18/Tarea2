@@ -1,4 +1,10 @@
 package Tarea2;
+public class SuperOcho extends Dulce {
+    public SuperOcho(int serie) {
+        super(serie);
+    }
 
-public class SuperOcho {
+    public String comer() {
+        return "superOcho";
+    }
 }

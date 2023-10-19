@@ -16,10 +16,10 @@ public class Comprador {
             this.vuelto += moneda.getValor();
         }
     }
-    public int cuantoVuelto() {
+    public int CantidadVuelto() {
         return this.vuelto;
     }
-    public String queBebiste() {
+    public String queBebio() {
         return this.sonido;
     }
 }

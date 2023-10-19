@@ -1,4 +1,6 @@
 package Tarea2;
-
-public class NoHayProductoException {
+public class NoHayProductoException extends Exception {
+    public NoHayProductoException(String mensaje) {
+        super(mensaje);
+    }
 }
