@@ -1,11 +1,36 @@
 package Tarea2;
+/**
+ * Máquina que vende los productos.
+ */
 public class Expendedor {
+    /**
+     * Depósito con las Coca Cola.
+     */
     private final Deposito<Producto> cocaCola;
+    /**
+     * Depósito con las Fanta.
+     */
     private final Deposito<Producto> fanta;
+    /**
+     * Depósito con las sprites.
+     */
     private final Deposito<Producto> sprite;
+    /**
+     * Depósito con los snickers.
+     */
     private final Deposito<Producto> snickers;
+    /**
+     * Depósito con los superOchos.
+     */
     private final Deposito<Producto> superOcho;
+    /**
+     * Depósito con las monedas del vuelto.
+     */
     private final Deposito<Moneda> monedasVuelto;
+    /**
+     * Máquina que vende los productos.
+     * @param numeroProductos Número de productos que vende la máquina.
+     */
     public Expendedor(int numeroProductos) {
         this.cocaCola = new Deposito<>();
         this.fanta = new Deposito<>();
@@ -22,6 +47,15 @@ public class Expendedor {
             this.superOcho.add(new SuperOcho(i));
         }
     }
+    /**
+     * Para omprar un producto de la máquina.
+     * @param moneda Para pagar el producto.
+     * @param tipo Tipo del producto a elegir.
+     * @return El producto comprado, si no hubo excepciones.
+     * @throws NoHayProductoException arrojada cuando no quedan productos en el depósito.
+     * @throws PagoIncorrectoException arrojada cuando el pago no es correcto.
+     * @throws PagoInsuficienteException arrojada cuando el valor cancelado es inferior al del producto.
+     */
     public Producto comprarProducto(Moneda moneda, TipoProducto tipo)
             throws NoHayProductoException, PagoIncorrectoException, PagoInsuficienteException {
         if (moneda == null) {
@@ -53,6 +87,11 @@ public class Expendedor {
         }
         return producto;
     }
+
+    /**
+     * Obtiene el vuelto
+     * @return el vuelto.
+     */
     public Moneda getVuelto() {
         return this.monedasVuelto.get();
     }
