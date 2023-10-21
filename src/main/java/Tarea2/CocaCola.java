@@ -7,7 +7,7 @@ public class CocaCola extends Bebida {
      *   /**
      *      * @param serie El número para identificar el producto.
      *      */
-     */
+
     public CocaCola(int serie) {
         super(serie);
     }
