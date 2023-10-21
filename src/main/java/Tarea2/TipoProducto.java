@@ -50,10 +50,9 @@ public enum TipoProducto {
     }
     /**
      * Obtiene el valor del producto.
-     * @return El valor del producto.
+     * @return El valor del producto en cuestion.
      */
     public int getPrecio() {
         return this.precio;
     }
 }
-.
