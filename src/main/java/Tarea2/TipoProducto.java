@@ -56,3 +56,4 @@ public enum TipoProducto {
         return this.precio;
     }
 }
+.
